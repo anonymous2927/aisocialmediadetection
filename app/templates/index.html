@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Social Media Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body>
+    <div id="loader" class="loader"></div>
+    <div class="content" style="display: none;">
+        <header>
+            <h1>Welcome to AI Social Media Detection</h1>
+            <p>Your trusted AI assistant to detect fake profiles and scams.</p>
+        </header>
+        <main>
+            <a href="{{ url_for('signup') }}" class="btn">Sign Up</a>
+            <a href="{{ url_for('login') }}" class="btn">Login</a>
+        </main>
+    </div>
+</body>
+</html>

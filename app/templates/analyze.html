@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyze Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Analyze Social Media Profile</h1>
+    </header>
+    <main>
+        <form action="{{ url_for('analyze') }}" method="POST">
+            <label for="platform">Platform:</label>
+            <select id="platform" name="platform" required>
+                <option value="instagram">Instagram</option>
+                <option value="facebook">Facebook</option>
+                <option value="x">X (formerly Twitter)</option>
+            </select>
+            <label for="profile_id">Profile ID:</label>
+            <input type="text" id="profile_id" name="profile_id" required>
+            <button type="submit" class="btn">Analyze</button>
+        </form>
+    </main>
+</body>
+</html>

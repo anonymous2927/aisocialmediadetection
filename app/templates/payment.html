@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Choose Your Plan</h1>
+    </header>
+    <main>
+        <form action="{{ url_for('payment') }}" method="POST">
+            <label>
+                <input type="radio" name="plan" value="monthly" required>
+                ₹249/month
+            </label>
+            <label>
+                <input type="radio" name="plan" value="annual" required>
+                ₹2999/year
+            </label>
+            <button type="submit" class="btn">Pay Now</button>
+        </form>
+    </main>
+</body>
+</html>
